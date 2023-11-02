@@ -1,0 +1,23 @@
+{
+  "doctors": [
+    {
+      "name": "Sravan kumar",
+      "salary": "350000",
+      "gender": "Male",
+      "age": "27",
+      "specialization": "Cordiologist",
+      "id": 1
+    }
+  ],
+  "patients": [
+    {
+      "name": "satya",
+      "weight": "54",
+      "gender": "Male",
+      "age": "24",
+      "disease": "stomach pain",
+      "doctor": "Sravan kumar",
+      "id": 1
+    }
+  ]
+}
