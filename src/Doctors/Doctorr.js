@@ -9,7 +9,7 @@ function Doctorr() {
 
   const handleAddDoctor = (newDoctor) => {
     // Send a POST request to your JSON server to add a new doctor
-    axios.post('http://localhost:5000/doctors', newDoctor)
+    axios.post('https://hospitalbackend-x0o2.onrender.com/doctors', newDoctor)
       .then((response) => {
         // Update the React state with the newly created doctor
         setDoctors([...doctors, response.data]);
@@ -24,7 +24,7 @@ function Doctorr() {
   };
   
   useEffect(() => {
-    axios.get('http://localhost:5000/doctors')
+    axios.get('https://hospitalbackend-x0o2.onrender.com/doctors')
       .then((response) => {
         setDoctors(response.data);
       })
@@ -35,7 +35,7 @@ function Doctorr() {
 
   const handleDeleteDoctor = (doctorId) => {
     // Send a DELETE request to your JSON server to delete the doctor data
-    axios.delete(`http://localhost:5000/doctors/${doctorId}`)
+    axios.delete(`https://hospitalbackend-x0o2.onrender.com/doctors/${doctorId}`)
       .then(() => {
         // Remove the deleted doctor from the React state
         const updatedDoctors = doctors.filter((doctor) => doctor.id !== doctorId);
@@ -53,7 +53,7 @@ function Doctorr() {
 
   const handleEditDoctor = (editedDoctor) => {
     // Send a PUT request to your JSON server to update the doctor data
-    axios.put(`http://localhost:5000/doctors/${editedDoctor.id}`, editedDoctor)
+    axios.put(`https://hospitalbackend-x0o2.onrender.com/doctors/${editedDoctor.id}`, editedDoctor)
       .then(() => {
         // Update the React state with the edited doctor data
         const updatedDoctors = doctors.map((doctor) =>

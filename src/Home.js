@@ -8,7 +8,7 @@ function Home() {
   const [doctorNotFound, setDoctorNotFound] = useState(false);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/doctors')
+    axios.get('https://hospitalbackend-x0o2.onrender.com/doctors')
       .then((response) => {
         setDoctors(response.data);
       })
@@ -16,7 +16,7 @@ function Home() {
         console.error('Error fetching doctor data:', error);
       });
 
-    axios.get('http://localhost:5000/patients')
+    axios.get('https://hospitalbackend-x0o2.onrender.com/patients')
       .then((response) => {
         setFilteredPatients(response.data);
       })

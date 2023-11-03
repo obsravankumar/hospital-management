@@ -7,6 +7,14 @@
       "age": "27",
       "specialization": "Cordiologist",
       "id": 1
+    },
+    {
+      "name": "krishna",
+      "salary": "27800",
+      "gender": "m",
+      "age": "28",
+      "specialization": "dentist",
+      "id": 2
     }
   ],
   "patients": [

@@ -14,7 +14,7 @@ const PatientForm = ({ onAdd }) => {
   const [doctors, setDoctors] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/doctors')
+    axios.get('https://hospitalbackend-x0o2.onrender.com/doctors')
       .then((response) => {
         setDoctors(response.data);
       })
@@ -42,7 +42,7 @@ const PatientForm = ({ onAdd }) => {
     };
 
     // Send a POST request to the JSON server to add the new patient
-    axios.post('http://localhost:5000/patients', newPatient)
+    axios.post('https://hospitalbackend-x0o2.onrender.com/patients', newPatient)
       .then((response) => {
         // Call the onAdd callback to update the patient list in the parent component
         onAdd(response.data);
